@@ -1,0 +1,37 @@
+LabExam 2024-11-14: Base64 + Message Digest
+-------------------------------------------------------------------------------
+
+Implement a class called "HashToken" with the following operation: 
+[2+2+2+4 points]
+
+A) hash(self, header_str:str, payload_str:str)->str:
+   - Encode header_str base64 
+   - Encode payload_str base64
+   - Concatenate the base64 encoded header with a "." and the base64 encoded 
+      payload 
+   - Calculate a SHA256 hash value from this resulting string.
+
+Example: 
+   header: '{"alg":"HS256"}'
+   payload: '{"sub":"teini"}
+   => eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWluaSJ9
+   => 1a03b69de5b2ab30262eaca677aa1a2d5625bf46e3bce21839d6a1bcc0de08dd
+
+Verify your implementations with the given "HashTokenTest" class.
+
+
+The small print
+---------------
+1. Project name: Rename the project (and the submitted ZIP file) so 
+that instead of "MyName" your name is used. 
+Please note that projects that do not comply with the naming 
+convention will be deducted 50% of the points!
+
+2. Manual review: A manual code review is performed for each solution 
+when grading. 
+
+3. Syntax errors: Implementation artifacts that contain syntax errors 
+won't count.
+
+4. Solutions that are obviously copied or copied will be assessed 
+negatively (with 0 points).

@@ -1,0 +1,38 @@
+LabExam 2024-11-28: Key Derivation + Symmetric Encryption
+-------------------------------------------------------------------------------
+
+Implement a class called "MessageEncrypter" with the following operations:
+
+A) __init__(self, password, salt, iv) [4 points]
+   A constructor that takes a "password", a "salt" and a "iv" and uses a key 
+   derivation function to generate a secret key (use the standard settings 
+   from the repository).  
+   The secret key and the given initialization vector "iv" are used to setup
+   an AES cipher in CTR mode.
+
+B) encrypt_message(self, message) [3 points]
+   Encrypt the given message with the AES cipher and returns a hex-string
+   of the ciphertext.
+
+C) decrypt_message(self, data) [3 points]
+   Decrypt the given data (ciphertext as hex-string) and return the plaintext 
+   message. 
+
+Verify your implementations with the given "MessageEncryptorTest" class.
+
+
+The small print
+---------------
+1. Project name: Rename the project (and the submitted ZIP file) so 
+that instead of "MyName" your name is used. 
+Please note that projects that do not comply with the naming 
+convention will be deducted 50% of the points!
+
+2. Manual review: A manual code review is performed for each solution 
+when grading. 
+
+3. Syntax errors: Implementation artifacts that contain syntax errors 
+won't count.
+
+4. Solutions that are obviously copied or copied will be assessed 
+negatively (with 0 points).
